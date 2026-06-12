@@ -8,6 +8,10 @@ A portfolio-quality Japanese learning dashboard built with HTML, CSS, and Vanill
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
+## Live Demo
+
+https://abhishek-tanniru.github.io/japanese-learning-tracker/
+
 ## Features
 
 ### Vocabulary Tracker
@@ -164,6 +168,39 @@ That's it. No dependencies, no build step, no `npm install`.
 - Navigate between pages using the sidebar — the URL hash updates (e.g., `#vocabulary`, `#kanji`)
 - Export your data regularly as a backup — LocalStorage is browser-specific and doesn't sync across devices
 
+## Why I Built This
+
+I am currently learning Japanese and wanted a way to track:
+
+- Vocabulary growth
+- Kanji progress
+- Resource completion
+- JLPT progression
+- Daily study consistency
+
+Instead of using multiple spreadsheets and notes, I built a centralized dashboard using vanilla JavaScript.
+
+## Technical Challenges
+
+Some challenges solved during development:
+
+- Designing a StorageService abstraction layer for future database migration
+- Building a GitHub-style contribution heatmap without external libraries
+- Implementing canvas-based analytics charts using pure JavaScript
+- Creating a responsive dashboard without frameworks
+- Managing application state using LocalStorage
+
+## Key Learnings
+
+Through this project I learned:
+
+- Modular JavaScript architecture
+- DOM manipulation
+- LocalStorage data persistence
+- Responsive UI design
+- Canvas-based chart rendering
+- Input validation and data management
+
 ## Browser Compatibility
 
 Works on all modern browsers — Chrome, Firefox, Edge, and Safari. No polyfills or transpilation required.
@@ -174,8 +211,6 @@ Works on all modern browsers — Chrome, Firefox, Edge, and Safari. No polyfills
 - [ ] User authentication and multi-user support
 - [ ] Cloud sync across devices
 - [ ] Database integration (PostgreSQL / MongoDB)
-- [ ] Spaced repetition system (SRS) for vocabulary and kanji
-- [ ] JLPT practice test mode
 - [ ] Audio pronunciation for vocabulary entries
 - [ ] Furigana toggle for kanji readings
 - [ ] PWA support with offline access
