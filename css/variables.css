@@ -1,0 +1,199 @@
+/* =============================================================================
+   VARIABLES.CSS — Design Tokens
+   ============================================================================= */
+
+:root {
+  /* --- Primary Colors (Indigo Blue — inspired by Japanese 藍/Ai) --- */
+  --primary:          #2D5A7B;
+  --primary-light:    #3A7CA5;
+  --primary-dark:     #1E3D54;
+  --primary-bg:       #E8F0F6;
+
+  /* --- Accent Color (Vermillion — inspired by 朱/Shu, torii gate red) --- */
+  --accent:           #D4654A;
+  --accent-light:     #E8876E;
+  --accent-bg:        #FDF0ED;
+
+  /* --- Semantic Colors --- */
+  --success:          #4A8B6F;
+  --success-light:    #6AAF8F;
+  --success-bg:       #EDF7F2;
+
+  --warning:          #D4A64A;
+  --warning-light:    #E8C46E;
+  --warning-bg:       #FDF8ED;
+
+  --danger:           #C75050;
+  --danger-light:     #E07070;
+  --danger-bg:        #FDEDED;
+
+  /* --- Background Colors --- */
+  --bg-primary:       #F8F6F3;
+  --bg-secondary:     #F0EDE8;
+  --bg-card:          #FFFFFF;
+  --bg-hover:         #F5F3EF;
+
+  /* --- Text Colors --- */
+  --text-primary:     #2C2C3A;
+  --text-secondary:   #6B6B80;
+  --text-tertiary:    #9B99AC;
+  --text-inverse:     #FFFFFF;
+
+  /* --- Border Colors --- */
+  --border:           #E2E0DB;
+  --border-light:     #EDEBE7;
+  --border-focus:     #2D5A7B;
+
+  /* --- Sidebar --- */
+  --sidebar-bg:       #2C2C3A;
+  --sidebar-text:     #C8C6D2;
+  --sidebar-hover:    #3A3A4A;
+  --sidebar-active:   #2D5A7B;
+  --sidebar-width:    260px;
+
+  /* --- Typography --- */
+  --font-primary:     'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-japanese:    'Noto Sans JP', 'Inter', sans-serif;
+
+  /* Font sizes */
+  --text-xs:          0.75rem;
+  --text-sm:          0.875rem;
+  --text-base:        1rem;
+  --text-lg:          1.125rem;
+  --text-xl:          1.5rem;
+  --text-2xl:         2rem;
+  --text-3xl:         2.5rem;
+
+  /* Font weights */
+  --font-normal:      400;
+  --font-medium:      500;
+  --font-semibold:    600;
+  --font-bold:        700;
+
+  /* Line heights */
+  --leading-tight:    1.25;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.75;
+
+  /* --- Spacing System (4px base unit) --- */
+  --space-1:          0.25rem;
+  --space-2:          0.5rem;
+  --space-3:          0.75rem;
+  --space-4:          1rem;
+  --space-5:          1.25rem;
+  --space-6:          1.5rem;
+  --space-7:          1.75rem;
+  --space-8:          2rem;
+  --space-9:          2.25rem;
+  --space-10:         2.5rem;
+  --space-12:         3rem;
+  --space-16:         4rem;
+
+  /* --- Border Radius --- */
+  --radius-sm:        4px;
+  --radius-md:        8px;
+  --radius-lg:        12px;
+  --radius-xl:        16px;
+  --radius-full:      9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm:        0 1px 3px rgba(0, 0, 0, 0.04),
+                      0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md:        0 2px 8px rgba(0, 0, 0, 0.06),
+                      0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg:        0 8px 24px rgba(0, 0, 0, 0.08),
+                      0 16px 48px rgba(0, 0, 0, 0.06);
+  --shadow-xl:        0 12px 32px rgba(0, 0, 0, 0.12),
+                      0 24px 64px rgba(0, 0, 0, 0.08);
+
+  /* --- Transitions --- */
+  --transition-fast:    150ms ease-out;
+  --transition-normal:  250ms ease-out;
+  --transition-slow:    350ms ease-out;
+
+  /* --- Z-Index Scale --- */
+  --z-base:           1;
+  --z-dropdown:       100;
+  --z-sticky:         200;
+  --z-sidebar:        300;
+  --z-modal-backdrop:  400;
+  --z-modal:          500;
+  --z-toast:          600;
+
+  /* --- Heatmap Colors --- */
+  --heatmap-empty:    #EBEDF0;
+  --heatmap-level-1:  #C6E2D6;
+  --heatmap-level-2:  #7BC4A2;
+  --heatmap-level-3:  #3EA87A;
+  --heatmap-level-4:  #216E4E;
+}
+
+
+/* -----------------------------------------------------------------------------
+   Dark Mode Overrides
+   ----------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* --- Primary Colors --- */
+  --primary:          #5BA4D9;
+  --primary-light:    #7BBCE8;
+  --primary-dark:     #4890C2;
+  --primary-bg:       #1E2A3A;
+
+  /* --- Accent --- */
+  --accent:           #E8876E;
+  --accent-light:     #F0A48E;
+  --accent-bg:        #3A2520;
+
+  /* --- Semantic Colors --- */
+  --success:          #6AAF8F;
+  --success-light:    #88C4A8;
+  --success-bg:       #1E3A2A;
+
+  --warning:          #E8C46E;
+  --warning-light:    #F0D88E;
+  --warning-bg:       #3A3020;
+
+  --danger:           #E07070;
+  --danger-light:     #F09090;
+  --danger-bg:        #3A2020;
+
+  /* --- Backgrounds --- */
+  --bg-primary:       #1A1B2E;
+  --bg-secondary:     #1F2038;
+  --bg-card:          #242540;
+  --bg-hover:         #2C2D48;
+
+  /* --- Text --- */
+  --text-primary:     #E8E6F0;
+  --text-secondary:   #9B99AC;
+  --text-tertiary:    #6B6980;
+  --text-inverse:     #1A1B2E;
+
+  /* --- Borders --- */
+  --border:           #3A3B50;
+  --border-light:     #2E2F44;
+  --border-focus:     #5BA4D9;
+
+  /* --- Sidebar --- */
+  --sidebar-bg:       #151628;
+  --sidebar-text:     #9B99AC;
+  --sidebar-hover:    #1F2038;
+  --sidebar-active:   #2D5A7B;
+
+  /* --- Shadows --- */
+  --shadow-sm:        0 1px 3px rgba(0, 0, 0, 0.2),
+                      0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md:        0 2px 8px rgba(0, 0, 0, 0.3),
+                      0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg:        0 8px 24px rgba(0, 0, 0, 0.3),
+                      0 16px 48px rgba(0, 0, 0, 0.2);
+  --shadow-xl:        0 12px 32px rgba(0, 0, 0, 0.4),
+                      0 24px 64px rgba(0, 0, 0, 0.3);
+
+  /* --- Heatmap --- */
+  --heatmap-empty:    #2C2D48;
+  --heatmap-level-1:  #1E4A3A;
+  --heatmap-level-2:  #2A6B50;
+  --heatmap-level-3:  #3EA87A;
+  --heatmap-level-4:  #5DD4A0;
+}

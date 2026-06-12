@@ -1,0 +1,223 @@
+/* =============================================================================
+   JLPT.CSS — JLPT Progress Page Styles
+   ============================================================================= */
+
+/* --- JLPT Roadmap Container --- */
+
+.jlpt-roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* --- JLPT Level Card --- */
+
+.jlpt-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background-color: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.jlpt-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.jlpt-completed {
+  border-color: var(--success);
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--success-bg) 100%);
+}
+
+.jlpt-in-progress {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--primary-bg) 100%);
+}
+
+.jlpt-locked {
+  border-color: var(--border);
+  opacity: 0.7;
+}
+
+.jlpt-locked:hover {
+  opacity: 1;
+}
+
+
+/* --- Level Badge --- */
+.jlpt-card-left {
+  flex-shrink: 0;
+}
+
+.jlpt-level-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  color: white;
+}
+
+.jlpt-level-number {
+  line-height: 1;
+}
+
+.jlpt-badge-n5 { background: linear-gradient(135deg, #4A8B6F, #6AAF8F); }
+.jlpt-badge-n4 { background: linear-gradient(135deg, #2D5A7B, #3A7CA5); }
+.jlpt-badge-n3 { background: linear-gradient(135deg, #D4A64A, #E8C46E); }
+.jlpt-badge-n2 { background: linear-gradient(135deg, #D4654A, #E8876E); }
+.jlpt-badge-n1 { background: linear-gradient(135deg, #C75050, #E07070); }
+
+
+/* --- Card Content --- */
+.jlpt-card-center {
+  flex: 1;
+  min-width: 0;
+}
+
+.jlpt-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.jlpt-card-title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+}
+
+.jlpt-card-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+
+/* --- Stats --- */
+.jlpt-card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.jlpt-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.jlpt-stat-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+
+/* --- Dates --- */
+.jlpt-card-dates {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+
+/* --- Right Side (Change Status Button) --- */
+.jlpt-card-right {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+
+/* --- Connector Line Between Cards --- */
+
+.jlpt-connector {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-1) 0;
+}
+
+.jlpt-connector-line {
+  width: 2px;
+  height: 24px;
+  background-color: var(--border);
+  border-radius: 1px;
+}
+
+
+/* --- Status Change Modal --- */
+
+.jlpt-status-options {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.jlpt-status-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-card);
+  min-width: 100px;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.jlpt-status-option:hover {
+  border-color: var(--primary);
+  background-color: var(--primary-bg);
+  transform: translateY(-2px);
+}
+
+.jlpt-status-option.active {
+  border-color: var(--primary);
+  background-color: var(--primary-bg);
+  color: var(--primary);
+}
+
+.jlpt-status-option span:first-child {
+  font-size: var(--text-xl);
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .jlpt-card {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .jlpt-card-right {
+    align-self: stretch;
+  }
+  
+  .jlpt-card-right .btn {
+    width: 100%;
+  }
+  
+  .jlpt-status-options {
+    flex-direction: column;
+  }
+}

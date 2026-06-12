@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Japanese Learning Tracker — Track your vocabulary, kanji, resources, JLPT progress, and study streaks.">
+  <meta name="theme-color" content="#2D5A7B">
+  
+  <title>Japanese Learning Tracker | 日本語学習トラッカー</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/tracker.css">
+  <link rel="stylesheet" href="css/resources.css">
+  <link rel="stylesheet" href="css/jlpt.css">
+  <link rel="stylesheet" href="css/analytics.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⛩️</text></svg>">
+</head>
+
+<body>
+  <div class="app-container" id="app-container">
+    
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    
+    <aside class="sidebar" id="sidebar">
+      
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-icon">⛩️</div>
+          <div class="sidebar-logo-text">
+            <h1>学習トラッカー</h1>
+            <span>Japanese Learning Tracker</span>
+          </div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav" id="sidebar-nav">
+        
+        <div class="sidebar-nav-section">
+          <div class="sidebar-nav-label">Main</div>
+          
+          <a href="#dashboard" class="nav-item active" data-page="dashboard" id="nav-dashboard">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </span>
+            <span>Dashboard</span>
+          </a>
+          
+          <a href="#vocabulary" class="nav-item" data-page="vocabulary" id="nav-vocabulary">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                <line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </span>
+            <span>Vocabulary</span>
+          </a>
+          
+          <a href="#kanji" class="nav-item" data-page="kanji" id="nav-kanji">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="8" y1="8" x2="16" y2="8"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+              </svg>
+            </span>
+            <span>Kanji</span>
+          </a>
+        </div>
+        
+        <div class="sidebar-nav-section">
+          <div class="sidebar-nav-label">Progress</div>
+          
+          <a href="#resources" class="nav-item" data-page="resources" id="nav-resources">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+            </span>
+            <span>Resources</span>
+          </a>
+          
+          <a href="#jlpt" class="nav-item" data-page="jlpt" id="nav-jlpt">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
+              </svg>
+            </span>
+            <span>JLPT Progress</span>
+          </a>
+          
+          <a href="#analytics" class="nav-item" data-page="analytics" id="nav-analytics">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+            </span>
+            <span>Analytics</span>
+          </a>
+        </div>
+        
+        <div class="sidebar-nav-section">
+          <div class="sidebar-nav-label">System</div>
+          
+          <a href="#settings" class="nav-item" data-page="settings" id="nav-settings">
+            <span class="nav-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span>Settings</span>
+          </a>
+        </div>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="theme-toggle">
+          <span class="theme-toggle-icon" id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+          <span>Dark Mode</span>
+          <div class="toggle-switch" id="toggle-switch"></div>
+        </button>
+      </div>
+      
+    </aside>
+    
+    
+    <main class="main-content" id="main-content">
+      <div id="app-content"></div>
+    </main>
+    
+  </div>
+  
+  
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  
+  
+  <div class="toast-container" id="toast-container"></div>
+  
+  
+  <script src="js/utils/helpers.js"></script>
+  <script src="js/utils/validators.js"></script>
+  <script src="js/utils/charts.js"></script>
+  <script src="js/utils/heatmap.js"></script>
+  
+  <script src="js/data/defaults.js"></script>
+  
+  <script src="js/services/StorageService.js"></script>
+  
+  <script src="js/modules/Dashboard.js"></script>
+  <script src="js/modules/VocabTracker.js"></script>
+  <script src="js/modules/KanjiTracker.js"></script>
+  <script src="js/modules/ResourceTracker.js"></script>
+  <script src="js/modules/JLPTProgress.js"></script>
+  <script src="js/modules/Analytics.js"></script>
+  <script src="js/modules/Settings.js"></script>
+  
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
