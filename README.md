@@ -1,6 +1,10 @@
 # Japanese Learning Tracker
 
-A portfolio-quality Japanese learning dashboard built with HTML, CSS, and Vanilla JavaScript. Track your vocabulary, kanji, study resources, JLPT progress, and daily streaks — all in a clean, responsive interface with dark mode support.
+Built without React, Vue, Angular, Bootstrap, Tailwind, jQuery, or any external frameworks.
+
+Everything is implemented using HTML5, CSS3, and Vanilla JavaScript.
+
+A portfolio-quality Japanese learning dashboard. Track your vocabulary, kanji, study resources, JLPT progress, and daily streaks — all in a clean, responsive interface with dark mode support.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
