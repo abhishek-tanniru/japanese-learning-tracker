@@ -16,6 +16,8 @@ A portfolio-quality Japanese learning dashboard. Track your vocabulary, kanji, s
 
 https://abhishek-tanniru.github.io/japanese-learning-tracker/
 
+![Demo](screenshots/demo.gif)
+
 ## Features
 
 ### Vocabulary Tracker
